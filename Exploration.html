@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<title>Exploration</title>
+	<script src="jquery-ui-1.11.4.custom"></script>
+	<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	<style>
+		#draggable
+		{
+			width: 100px;
+			height: 100px;
+			float: left;
+			background-color: aqua;
+			margin: 10px;
+		}
+		#droppable
+		{
+			width: 150px;
+			height: 150px;
+			float: left;
+			background-color: maroon;
+			margin: 10px;
+		}
+	</style>
+	<script>
+	$(document).ready(function() {
+	$( "#draggable" ).draggable();
+	$( "#droppable" ).droppable({
+  		drop: function() {
+    	alert( "dropped" );
+ 	 }
+	});
+	});
+	</script>
+</head>
+<body>
+	<div id = "draggable">
+		<p>Drag this</p>
+	</div>
+	<div id = "droppable">
+		<p>Drop it here</p>
+	<div>
+</body>
+</html>
